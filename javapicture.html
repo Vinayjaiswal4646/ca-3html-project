@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <img src="free-nature-images.jpg" alt=" " onmouseover="big_images(this)" onmouseout="small_image(this)"> 
+
+    <script>
+        
+        function big_images(x)
+            {
+                x.style.width="400px"
+                x.style.height="600px"
+          }
+          function small_image(x){
+            x.style.width="50px"
+            x.style.height="80px"
+          }
+            
+
+          
+
+
+          
+   </script>
+
+<div id="form">
+    <h1 >Keyboard event</h1>
+    <p>onekeydown</p>
+
+    <input type="text" onkeydown="document.getElementById('form')">
+
+<p> onkeyup</p>
+<input type="text" onkeyup="alert(this.value)">
+
+<p>onkeypress</p>
+<input type="text" onkeypress="alert(this.value)">
+
+
+
+</div>
+
+
+
+</body>
+</html>

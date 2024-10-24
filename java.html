@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(free-nature-images.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+        }
+
+        input {
+            border: 2px solid rgb(123, 0, 238);
+            border-radius: 7px;
+
+        }
+
+        input:focus {
+            background-color: rgb(209, 209, 209);
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(255, 217, 0);
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function data() 
+        {
+            var a=document.getElementById("id1").value;
+            var b=document.getElementById("id2").value;
+            var c=document.getElementById("id3").value;
+            var d=document.getElementById("id4").value;
+
+            if (a == "" || b == "" || c == "" || d == "") 
+            {
+                alert("All fields are mandatory");
+                return false;
+            }
+            else if (b.length>10||b.length<10 )
+            {
+                alert("Number is not 10 digit")
+            return true;
+            }
+            else id(isNaN(b))
+            {
+                alert("only numbers are allowed")
+                return false;
+
+            }
+
+            else if(c!=d)
+            {
+                alert("Enter same password")
+                return false;
+            }
+
+        }
+
+    </script>
+
+
+    <form  onsubmit="return data()" action="javapicture.html" method="get">
+        <label for="" id="id1">User Id</label>
+        <br>
+        <input type="text">
+        <br><br>
+        <label for="" id="id2">Mobile Number</label><br>
+        <input type="text"><br><br>
+        <label for="" id="id3">Enter Password</label><br>
+        <input type="text"><br><br>
+        <label for="" id="id4">Confirm Password</label><br>
+        <input type="text"> <br><br>
+        <input type="submit" value="Submit Now">
+
+    </form>
+</body>
+
+</html>

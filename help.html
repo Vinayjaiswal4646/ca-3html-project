@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Management Website</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #495057;
+    }
+
+    header {
+      background-color: #343a40;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      background-color: #495057;
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      margin: 0 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    nav a:hover {
+      background-color: #6c757d;
+      transform: scale(1.05);
+    }
+
+    .container {
+      width: 80%;
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Home Page Styles */
+    .hero {
+      background-image: url(bkimg.jpg); /* Replace with your own image */
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+      border-radius: 8px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 8px;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      z-index: 1;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 32px;
+      color: #343a40;
+      font-weight: 600;
+      border-bottom: 2px solid #007bff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .event-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .event-item {
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      width: calc(50% - 10px);
+      margin-bottom: 20px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .event-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .event-item h3 {
+      margin-top: 0;
+      color: #007bff;
+      font-size: 24px;
+      border-bottom: 1px solid #007bff;
+      padding-bottom: 10px;
+    }
+
+    .event-item p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
+    /* Registration Form Styles */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input, 
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      box-sizing: border-box;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    .form-group button {
+      background-color: #007bff;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .form-group button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+      position: relative;
+      clear: both;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .event-item {
+        width: 100%;
+      }
+
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Event Management Website</h1>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#events">Events</a>
+    <a href="#contact">Contact Us</a>
+    <a href="#register">Register</a>
+  </nav>
+
+  <!-- Hero Section (Home Page) -->
+  <section class="hero">
+    <h2>Welcome to Our Event Management Platform</h2>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events" class="container">
+    <h2 class="section-title">Upcoming Events</h2>
+
+    <div class="event-list">
+      <div class="event-item">
+        <h3>Tech Conference 2024</h3>
+        <p>Date: October 20, 2024</p>
+        <p>Location: New York, NY</p>
+        <a href="#event-details" class="btn">View Details</a>
+      </div>
+      <div class="event-item">
+        <h3>Startup Expo 2024</h3>
+        <p>Date: November 12, 2024</p>
+        <p>Location: San Francisco, CA</p>
+        <a href="#event-details" class="btn">View Details</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Event Details Section -->
+  <section id="event-details" class="container">
+    <h2 class="section-title">Event Details: Tech Conference 2024</h2>
+    <p>
+      The Tech Conference 2024 is the ultimate gathering for technology enthusiasts. It features keynotes from industry leaders, hands-on workshops, and networking opportunities.
+    </p>
+    <p>
+      <strong>Schedule:</strong><br>
+      - 9:00 AM: Registration<br>
+      - 10:00 AM: Opening Keynote<br>
+      - 12:00 PM: Lunch Break<br>
+      - 2:00 PM: Breakout Sessions<br>
+      - 5:00 PM: Closing Ceremony
+    </p>
+    <a href="#register" class="btn">Register Now</a>
+  </section>
+
+  <!-- Registration Form Section -->
+  <section id="register" class="container">
+    <h2 class="section-title">Event Registration</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="event">Select Event</label>
+        <select id="event" required>
+          <option value="tech-conference">Tech Conference 2024</option>
+          <option value="startup-expo">Startup Expo 2024</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button type="submit">Submit Registration</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact" class="container">
+    <h2 class="section-title">Contact Us</h2>
+    <form>
+      <div class="form-group">
+        <label for="contact-name">Full Name</label>
+        <input type="text" id="contact-name" required>
+      </div>
+      <div class="form-group">
+        <label for="contact-email">Email Address</label>
+        <input type="email" id="contact-email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" rows="5" required></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit">Send Message</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Event Management Website. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

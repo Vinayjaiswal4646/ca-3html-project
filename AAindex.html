@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <style>
+        
+        
+        body {
+           
+            background: linear-gradient(to right,#4facfe,#00f2fe)
+            
+
+            
+        }
+
+
+        header {
+
+            border-radius: 10px;
+            border: 1px solid rgb(57, 0, 131);
+
+          
+
+            color: white;
+            padding: 18px;
+            text-align: center;
+            box-shadow: 1px 2px rgb(0, 0, 0);
+
+        }
+
+        #h1a {
+            margin: 0px;
+            font-size: 36px;
+            letter-spacing: 1px;
+        }
+
+        #nav1 {
+            width: 100%;
+            border: 1px solid rgb(57, 0, 131);
+          
+            text-align: center;
+            padding: 15px 0;
+            border-radius: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            box-shadow: 2px 2px;
+
+        }
+
+        #a1,
+        #a2,
+        #a3,
+        #a4 {
+            text-decoration: none;
+        }
+
+        nav a {
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        nav a:hover {
+            background-color: #51a788;
+
+
+        }
+
+        .welcomepage {
+
+            font-size: 20px;
+            background-image: url(bkimg.jpg);
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: centr;
+
+            position: relative;
+            border-radius: 8px;
+        }
+
+
+
+        #h2wel {
+            color: rgb(45, 11, 31);
+            margin-bottom: 80px;
+        }
+
+        #photodiv {
+            background-color: #F4F4F4F3;
+            height: 300px;
+            width: 1400px;
+            border: none;
+            border-radius: 40px;
+            margin: auto;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+            transition: transform 0.3s, box-shadow 0.3s;
+
+        }
+
+        .images {
+            
+
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 50px;
+            margin-left: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .images:hover {
+            transform: scale(1.3);
+        }
+
+        #maindiv1 {
+            background: linear-gradient( to right,#fbc2eb,#a6c1ee);
+            background-color: silver;
+            overflow-y: scroll;
+
+            height: 400px;
+            width: 1100px;
+            margin: auto;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+            transition: transform 0.3s, box-shadow 0.3s;
+
+        }
+
+        .maindiv1hover {
+            padding-bottom: 25px;
+            background-color: rgba(244, 244, 244, 0.953);
+            transition: transform 0.3s ease;
+        }
+
+        .maindiv1hover:hover {
+            transform: scale(1.05);
+        }
+
+        #p_maindiv1 {
+            margin-top: 10px;
+            text-decoration: underline;
+            margin-left: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 40px;
+            font-weight: 100;
+            text-decoration: underline;
+            text-decoration-thickness: 1.5px;
+            text-decoration-color: rgb(19, 4, 195);
+            text-underline-offset: 12px;
+        }
+
+        #maindiv1a {background-color: rgb(220, 220, 220);
+            height: 150px;
+            width: 600px;
+            border-radius: 20px;
+            margin-left: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        #maindiv1b {background-color: rgb(220, 220, 220);
+            height: 150px;
+            width: 600px;
+            border-radius: 20px;
+            margin-left: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        #maindiv1c {
+            background-color: rgb(220, 220, 220);
+            height: 150px;
+            width: 600px;
+            border-radius: 20px;
+            margin-left: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .event_para {
+            font-size: x-large;
+            color: blue;
+            margin-left: 20px;
+            padding-top: 15px;
+            text-decoration: underline;
+            text-decoration-thickness: 1.5px;
+            text-decoration-color: blue;
+            text-underline-offset: 12px;
+
+        }
+
+        .event_para2 {
+            margin-left: 20px;
+            line-height: 25px;
+
+        }
+
+        .main1button {
+            color: white;
+            margin-left: 20px;
+            height: 30px;
+            width: 150px;
+            background-color: rgb(14, 129, 217);
+            border-radius: 10px;
+        }
+
+
+
+        /* maindiv2 */
+
+        #maindiv2 {
+            background: linear-gradient( to right,#fbc2eb,#a6c1ee);
+            padding-left: 20px;
+            font-size: larger;
+            overflow-y: scroll;
+            line-height: 30px;
+            height: 400px;
+            width: 1100px;
+            margin: auto;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-size: large;
+
+        }
+
+        #p_maindiv2 {
+            margin-top: 10px;
+            text-decoration: underline;
+            margin-left: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 40px;
+            font-weight: 100;
+            text-decoration: underline;
+            text-decoration-thickness: 1.5px;
+            text-decoration-color: rgb(19, 4, 195);
+            text-underline-offset: 12px;
+        }
+
+        h4 {
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-decoration-color: rgb(0, 0, 0);
+            text-underline-offset: 12px;
+        }
+
+
+
+
+        #maindiv3 {
+
+            padding-left: 20px;
+            font-size: larger;
+
+            background: linear-gradient( to right,#fbc2eb,#a6c1ee);
+            line-height: 30px;
+            height: 525px;
+            width: 1100px;
+            margin: auto;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-size: large;
+
+        }
+
+        #p_maindiv3 {
+            padding-top: 20px;
+            margin-top: 10px;
+            text-decoration: underline;
+            margin-left: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 40px;
+            font-weight: 100;
+            text-decoration: underline;
+            text-decoration-thickness: 1.5px;
+            text-decoration-color: rgb(19, 4, 195);
+            text-underline-offset: 12px;
+        }
+
+        
+
+        .formdes {background-color: #F4F4F4F3;
+
+            margin-bottom: 23px;
+            margin-left: 20px;
+            height: 30px;
+            width: 900px;
+            line-height: 50px;
+        }
+
+        #submit {
+            color: white;
+            background-color: rgb(14, 129, 217);
+            border-radius: 5px;
+            margin-left: 20px;
+            width: 200px;
+            height: 30px;
+
+            transition: transform 0.3s ease;
+        }
+
+        #submit:hover {
+            transform: scale(1.1);
+        }
+
+
+
+        #maindiv4 {
+
+            background: linear-gradient( to right,#fbc2eb,#a6c1ee);
+            padding-left: 20px;
+            font-size: larger;
+
+            line-height: 30px;
+            height: 540px;
+            width: 1100px;
+            margin: auto;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-size: large;
+
+        }
+
+        #p_maindiv4 {
+            padding-top: 20px;
+            margin-top: 10px;
+            text-decoration: underline;
+            margin-left: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 40px;
+            font-weight: 100;
+            text-decoration: underline;
+            text-decoration-thickness: 1.5px;
+            text-decoration-color: rgb(19, 4, 195);
+            text-underline-offset: 12px;
+        }
+
+        #button2 {
+            height: 30px;
+            width: 200px;
+            background-color: rgb(14, 129, 217);
+            color: white;
+            margin-left: 20px;
+            border-radius: 5px;
+
+
+        }
+
+
+    .formdes2  {margin-bottom: 23px;
+            margin-left: 20px;
+            height: 30px;
+            width: 900px;
+            line-height: 50px;
+            background-color: #F4F4F4F3;
+
+
+
+}
+
+        footer {  
+        margin: 0;
+      text-align: center;
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+      position: relative;
+      
+    }
+
+        footer p {
+            margin: 0;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+
+  
+
+    <header>
+        <h1 id="h1a">College Event Management System </h1>
+    </header>
+    <nav id="nav1">
+        <a id="a1" href="AAindex.html">Home</a>
+        <a id="a2" href="#maindiv2">Events</a>
+        <a id="a3" href="contact.html">ContactUs</a>
+        <a id="a4" href="#maindiv3">Register</a>
+    </nav>
+
+    <div class="welcomepage">
+        <h2 id="h2wel">Welcome to Our Event Management Platform</h2>
+    </div>
+
+    <div id="photodiv">
+        <center>
+            <img id="img1" class="images" src="fLTU/img1.jpg" alt="NO IMAGE">
+            <img id="img2" class="images" src="fLTU/img2.jpg" alt="NO IMAGE">
+            <img id="img3" class="images" src="fLTU/img3.jpg" alt="NO IMAGE">
+            <img id="img4" class="images" src="fLTU/img4.jpg" alt="NO IMAGE">
+            <img id="img5" class="images" src="fLTU/img5.jpg" alt="NO IMAGE">
+        </center>
+
+
+    </div>
+
+
+    <!-- break break -->
+
+
+    <div id="maindiv1">
+        <p id="p_maindiv1">Upcoming Events</p>
+
+
+        <div id="maindiv1a" class="maindiv1hover">
+            <p id="p_maindiv1a" class="event_para">SPORTS MAINIA 2.O</p>
+            <p class="event_para2"> DATE: October 25,2024 <br>
+                Location: LPU Indoor Stadium </p>
+            <button class="main1button">View Details</button>
+        </div>
+
+        <div id="maindiv1b" class="maindiv1hover">
+            <p id="p_maindiv1b" class="event_para"> FRESHER TALENT SEARCH
+            </p>
+            <p class="event_para2"> DATE: October 19,2024 <br>
+                Location: UNIPOLISS</p>
+            <button class="main1button">View Details</button>
+        </div>
+
+        <div id="maindiv1c" class="maindiv1hover">
+            <p id="p_maindiv1c" class="event_para">SINGING-ZONE 3</p>
+            <p class="event_para2"> DATE: October 31,2024 <br>
+                Location: DWS-BLOCK 13 </p>
+            <button class="main1button">View Details</button>
+        </div>
+    </div>
+    <!-- Break break -->
+    <div id="maindiv2">
+
+        <p id="p_maindiv2">Event Details</p>
+
+        <p>
+        <h4>1.SPORTS MAINIA 2.O</h4>
+
+        Venue: LPU SPORTS-COMPLEX
+        <br>
+        Inetrval: 5 days
+        <br>
+        Dates: 25/October/2024 to 30/October/2024
+        <br>
+        Timing: 09:00am to 05:00pm
+        <br>
+        Last date to register:22/october/2024
+
+        </p>
+        <p>
+        <h4>2.FRESHER TALENT SEARCH</h4>
+
+        Venue: UNIPOLISS
+        <br>
+        Inetrval: 3 days
+        <br>
+        Dates: 19/October/2024 to 21/October/2024
+        <br>
+        Timing: 10:00am to 02:00pm
+
+        <br>
+        Last date to register:17/october/2024
+        </p>
+        <p>
+        <h4>3.SINGING-ZONE 3</h4>
+
+        Venue:LPU SPORTS-COMPLEX
+        <br>
+        Inetrval: 4 days
+        <br>
+        Dates: 21/October/2024 to 24/October/2024
+        <br>
+        Timing: 09:00am to 12:00pm
+        Last date to register: 19/october/2024
+        </p>
+
+    </div>
+    <!-- break break -->
+    <div id="maindiv3">
+        <p id="p_maindiv3"> EVENT REGISTERATION</p>
+        <form action=""  >
+
+            <label for="name">Name</label><br>
+            <input type="text" id="name" class="formdes">
+            <br>
+            <label for="email">Email Adress</label>
+            <br>
+            <input type="text" id="email" class="formdes">
+            <br>
+            <label for="regnum">Registeration Number</label><br>
+            <input type="text" name="regnum" id="regnum" class="formdes"> <br>
+            <label for="selectevent">Select Event</label> <br>
+
+            <select name="selectevent" id="selectevent" class="formdes">
+                <option value="">Select</option>
+                <option value="">SPORTS MAINIA 2.O</option>
+                <option value="">FRESHER TALENT SEARCH</option>
+                <option value="">SINGING-ZONE 3</option>
+            </select>
+
+
+            <br> <br>
+            <input type="submit" name="submit" id="submit">
+    </div>
+
+    <div id="maindiv4">
+        <p id="p_maindiv4">Contact US</p>
+        <form action="" >
+            <label for="name">Name</label><br>
+            <input type="text" id="name" class="formdes2">
+            <br>
+            <label for="email">Email Adress</label>
+            <br>
+            <input type="text" id="email" class="formdes2">
+            <br>
+
+            <label for="bio">Your message</label>
+            <br>
+            <textarea name="bio" id="bio" rows="10" cols="100" style="background-color: #F4F4F4F3;"></textarea>
+            <br><br>
+
+            <button id="button2">Send Message</button>
+
+        </form>
+    </div>
+
+
+    <footer >
+        <p>&copy; 2024 Event Management Website. All Rights Reserved.</p>
+    </footer>
+
+
+
+
+
+</body>
+
+</html>
